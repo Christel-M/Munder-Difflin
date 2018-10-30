@@ -1,0 +1,274 @@
+body {
+  margin: 0;
+  background-color: #f4f4f4;
+}
+
+.center{
+  text-align: center;
+}
+
+.navbar {
+  background-color: #000000;
+  width: 100%;
+  margin: 0;
+  position: fixed;
+  z-index: 1;
+}
+
+.navbar ul {
+  list-style-type: none;
+}
+
+.navbar li {
+  display: inline;
+  padding: 6px 23px;
+  float: right;
+}
+
+.navbar img {
+  width: 60px;
+  height: 30px;
+  /* padding: .5% 0; */
+}
+
+.navbar li a {
+  text-decoration: none;
+  font-size: 1.1em;
+  color: #ffffff;
+}
+
+.navbar li a:hover{
+  color: #00d49d;
+}
+
+.page-grid{
+  display: grid;
+  grid-template-columns: 100%;
+  position: relative;
+  z-index: 0;
+  top: 65px;
+}
+
+/************************************************************************/
+
+#home {
+  background-image: url("images/Hero.jpg");
+  background-position: center;
+  height: 835px;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.home-logo {
+padding: 8% 52% 1% 11.5%;;
+}
+
+.home-logo h1{
+  text-transform: uppercase;
+  font-size: 3em;
+  overflow: hidden;
+  border-right: .13em solid #090b04;
+  white-space: nowrap;
+  letter-spacing: .15em;
+  animation: typer 2.5s steps(70, end),
+             blinker .75s step-end infinite;
+}
+
+@keyframes typer {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes blinker {
+  from, to{
+    border-color: transparent;
+  }
+   50%{
+    border-color: #090b04;
+  }
+}
+
+.home-logo h2{
+  text-transform: uppercase;
+  font-size: 2em;
+  position: absolute;
+  top: 200px;
+  opacity: 0;
+  animation-name: FadeIn;
+  animation-delay: 3s;
+  animation-duration: 6s;
+}
+
+@keyframes FadeIn {
+  0% {
+    position: absolute;
+    right: -3rem;
+    opacity: 0;
+  }
+
+  75%, 100%{
+    position: absolute;
+    right: 10rem;
+    opacity: 1;
+  }
+
+  /* 100% {
+    opacity: 0;
+    right: 10rem;
+  } */
+}
+
+/************************************************************************/
+
+#our-story{
+  padding: 2%;
+}
+.ourstory-grid {
+  display: inline-grid;
+  justify-content: center;
+  margin: 10px;
+  grid-template: repeat(1, 500px) / repeat(3, 500px);
+  grid-gap: 4px;
+  position: relative;
+}
+
+.ourstory-grid img{
+  width: 400px;
+  height: 400px;
+}
+
+
+/************************************************************************/
+
+#services{
+  padding: 5%;
+}
+
+.services-grid{
+  display: inline-grid;
+  justify-content: center;
+  padding: 10px;
+  grid-template: repeat(1, 200px) / repeat(3, 200px);
+  grid-gap: 4px;
+}
+
+/************************************************************************/
+
+#products{
+  padding: 5%;
+}
+
+/************************************************************************/
+
+#team{
+  padding: 5%;
+}
+
+.team-grid{
+  display: inline-grid;
+  justify-content: center;
+  padding: 10px;
+  grid-template: repeat(1, 300px) / repeat(3, 33%);
+  grid-gap: 4px;
+}
+
+.team-grid img{
+  width: 450px;
+  height: 450px;
+}
+
+
+/************************************************************************/
+
+#contact{
+  padding: 8%;
+}
+
+.contact-grid{
+  display: inline-grid;
+  justify-content: center;
+  padding: 10px;
+  width: 100%;
+  grid-template: 700px / 60% 40%;
+  grid-gap: 2px;
+}
+
+.contact-grid div:nth-child(1){
+  background-image: url("https://images.unsplash.com/photo-1534536281715-e28d76689b4d?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=319ff67aedcfdeced830b6b0b55df5fd&auto=format&fit=crop&w=1500&q=80");
+  background-position: center;
+  height: 700px;
+  background-repeat: no-repeat;
+  /* background-size: cover; */
+}
+
+
+/************************************************************************/
+
+#contact{
+  padding: 5%;
+}
+
+.account-grid{
+  display: inline-grid;
+  grid-template: 500px / 50% 50%;
+  justify-content: center;
+  width: 100%;
+  padding: 10px;
+  grid-gap: 2px;
+}
+
+
+/************************************************************************/
+
+#account{
+  padding: 5%;
+}
+
+
+/************************************************************************/
+
+.footer{
+  padding: 1%;
+  background-color: #000000;
+  bottom: 0;
+}
+
+.footer-grid {
+  display: inline-grid;
+  grid-template: auto / repeat(3, 33%);
+  justify-content: center;
+  width: 100%;
+  padding: 10px;
+  grid-gap: 2px;
+}
+
+.footer-grid img {
+  width: 40px;
+  height: 40px;
+}
+
+.footer-grid img:hover {
+  color: #00d49d;
+}
+.footer-grid p, label{
+  font-size: 1em;
+  color: #ffffff;
+}
+
+.footer-grid a {
+  text-decoration: none;
+  font-size: 1em;
+  color: #ffffff;
+}
+
+.footer-grid a:hover {
+  color: #00d49d;
+}
+
+.footer-grid div:nth-child(2) {
+  margin: 0;
+}
