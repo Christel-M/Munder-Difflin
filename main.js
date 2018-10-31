@@ -1,56 +1,26 @@
 //Product page
-var img1 = document.getElementById("img-1");
-var img2 = document.getElementById("img-2");
-var img3 = document.getElementById("img-3");
-var img4 = document.getElementById("img-4");
+let img = document.querySelectorAll('.image-grid');
+console.log(img);
 
-img1.addEventListener("mouseover", showMsg1);
-img1.addEventListener("mouseout", hideMsg1);
-img2.addEventListener("mouseover", showMsg2);
-img2.addEventListener("mouseout", hideMsg2);
-img3.addEventListener("mouseover", showMsg3);
-img3.addEventListener("mouseout", hideMsg3);
-img4.addEventListener("mouseover", showMsg4);
-img5.addEventListener("mouseout", hideMsg4);
 
-function showMsg1() {
-  var img = document.getElementsByClassName("show-text");
-  img.classList.remove("hidden");
-}
+for (let i = 0; i < img.length; i++){
+  img[i].addEventListener("mouseover", showMsg);
+  img[i].addEventListener("mouseout", hideMsg);
 
-function hideMsg1() {
-  var p = document.querySelector("p");
-  p.classList.add("hidden");
-}
 
-function showMsg2() {
-  var img = document.querySelector("p");
-  img.classList.remove("hidden");
-}
+   function showMsg() {
+    var para = img[i].nextElementSibling;
+    para.classList.remove("hidden");
 
-function hideMsg2() {
-  var p = document.querySelector("p");
-  p.classList.add("hidden");
-}
 
-function showMsg3() {
-  var img = document.querySelector("p");
-  img.classList.remove("hidden");
-}
+    // img.classList.remove("hidden");
+  }
 
-function hideMsg3() {
-  var p = document.querySelector("p");
-  p.classList.add("hidden");
-}
+  function hideMsg() {
+    var para = img[i].nextElementSibling;
+    para.classList.add("hidden");
+  }
 
-function showMsg4() {
-  var img = document.querySelector("p");
-  img.classList.remove("hidden");
-}
-
-function hideMsg4() {
-  var p = document.querySelector("p");
-  p.classList.add("hidden");
 }
 
 
