@@ -1,6 +1,5 @@
 body {
   margin: 0;
-  background-color: #f4f4f4;
   font-family: 'Roboto Slab', serif;
 }
 
@@ -8,8 +7,15 @@ body {
   text-align: center;
 }
 
-#products, #our-story, #services, #team, #contact, #account {
+#products, #our-story, #contact {
+  background-color: #f4f4f4;
   padding: 5%;
+}
+
+#services, #team, #account {
+  background-color: #ffffff;
+  padding: 5%;
+
 }
 
 .page-grid{
@@ -110,6 +116,7 @@ padding: 14% 15% 18% 11.5%;
 .product-grid img {
   width: 400px;
   height: 330px;
+  border: 1px solid #545454;
 }
 
 .show-text {
@@ -117,7 +124,7 @@ padding: 14% 15% 18% 11.5%;
   font-size: 1em;
   bottom: 123px;
   background-color: rgba(0, 212, 157, 0.75);
-  color: white;
+  color: #ffffff;
   margin: 15px;
 
 }
@@ -126,83 +133,136 @@ padding: 14% 15% 18% 11.5%;
   display: none;
 }
 
-/****************************OUR********************************************/
-
-#our-story {
-}
-
-.ourstory-grid {
-  background-color: #ffffff;
-  display: inline-grid;
-  grid-template: 500px / repeat(3, 33%);
-  grid-gap: 10px;
-  position: relative;
-  /* padding: 6%; */
-}
-
-.ourstory-grid img{
-  width: 350px;
-  height: 350px;
-}
-
-
 /***************************SERVICES*********************************************/
+
 .services-grid{
   display: inline-grid;
   justify-content: center;
   padding: 10px;
-  grid-template: repeat(1, 200px) / repeat(3, 200px);
-  grid-gap: 4px;
+  grid-template: auto / repeat(3, 25%);
+  grid-gap: 100px;
 }
 
-/*******************************TEAM*****************************************/
+.services-grid img {
+  width: 100px;
+  height: 100px;
+}
 
+.learn-more {
+  border: 2px solid #00d49d;
+  background-color: #ffffff;
+  color: #00d49d;
+  padding: 3%;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+.learn-more:hover{
+  background-color: #00d49d;
+  color: #ffffff;
+}
+
+
+/****************************OUR STORY********************************************/
+
+.ourstory-grid {
+  display: inline-grid;
+  grid-template: auto / repeat(3, 33%);
+  justify-content: center;
+  grid-gap: 25px;
+  position: relative;
+}
+
+.ourstory-grid img{
+  width: 350px;
+  height: 270px;
+}
+
+
+/*******************************TEAM*****************************************/
 
 .team-grid{
   display: inline-grid;
   justify-content: center;
-  padding: 10px;
-  grid-template: repeat(1, 300px) / repeat(3, 33%);
-  grid-gap: 4px;
+  grid-template: auto / repeat(3, 33%);
+  grid-gap: 20px;
+  position: relative;
 }
 
 .team-grid img{
-  width: 450px;
-  height: 450px;
+  width: 400px;
+  height: 400px;
 }
 
 
-/***********************************CONTACT*************************************/
+/***********************************CONTACT / REGISTER*************************************/
+.contact-grid h2 {
+  color: #00d49d;
+}
 
 .contact-grid{
-  display: inline-grid;
+  display: grid;
+  grid-template: repeat(2, auto) / 50%;
   justify-content: center;
-  padding: 10px;
   width: 100%;
-  grid-template: 700px / 60% 40%;
+  padding: 5px;
   grid-gap: 2px;
 }
 
-.contact-grid div:nth-child(1){
-  background-image: url("https://images.unsplash.com/photo-1534536281715-e28d76689b4d?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=319ff67aedcfdeced830b6b0b55df5fd&auto=format&fit=crop&w=1500&q=80");
-  background-position: center;
-  height: 700px;
-  background-repeat: no-repeat;
-  /* background-size: cover; */
+.contact-icons {
+  display: inline-grid;
+  grid-template: 200px / repeat(4, 33%);
+  justify-content: center;
+  width: 100%;
+  grid-gap: 30px;
+  border-bottom: 1px solid #545454;
 }
 
+.contact-icons img {
+  width: 50px;
+  height: 50px;
+}
 
-/*********************************REGISTER***************************************/
+input[type=text], [type=email], [type=subject], [type=password], select {
+  font-size: .8em;
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #00d49d;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+input[type="submit"] {
+  border: 2px solid #00d49d;
+  background-color: #00d49d;
+  color: #ffffff;
+  padding: 2%;
+  width: 100%;
+  float: right;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+input[type="submit"]:hover {
+  background-color: #04b587;
+  border: 2px solid #04b587;
+  color: #ffffff;
+}
 
 .account-grid{
   display: inline-grid;
-  grid-template: 500px / 50% 50%;
+  grid-template: 500px / repeat(2, 40%);
   justify-content: center;
   width: 100%;
   padding: 10px;
-  grid-gap: 2px;
+  grid-gap: 100px;
 }
 
+.account-grid h3 {
+  color: #00d49d;
+}
 
 /*********************************FOOTER***************************************/
 
@@ -214,11 +274,10 @@ padding: 14% 15% 18% 11.5%;
 
 .footer-grid {
   display: inline-grid;
-  grid-template: auto / repeat(3, 33%);
+  grid-template: auto / repeat(3, 30%);
   justify-content: center;
   width: 100%;
-  padding: 10px;
-  grid-gap: 2px;
+  grid-gap: 5px;
 }
 
 .footer-grid img {
@@ -229,7 +288,7 @@ padding: 14% 15% 18% 11.5%;
 .footer-grid img:hover {
   color: #00d49d;
 }
-.footer-grid p, label{
+.footer-grid p{
   font-size: 1em;
   color: #ffffff;
 }
