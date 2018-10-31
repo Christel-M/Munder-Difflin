@@ -108,7 +108,7 @@ padding: 14% 15% 18% 11.5%;
 
 .product-grid {
   display: inline-grid;
-  grid-template: 330px / repeat(3, 33%);
+  grid-template: repeat(2, auto) / repeat(3, 33%);
   grid-gap: 10px;
   position: relative;
 }
@@ -120,12 +120,15 @@ padding: 14% 15% 18% 11.5%;
 }
 
 .show-text {
-  position: relative;
-  font-size: 1em;
-  bottom: 123px;
-  background-color: rgba(0, 212, 157, 0.75);
-  color: #ffffff;
-  margin: 15px;
+  position: absolute;
+    font-size: 1em;
+    padding-bottom: 14px;
+    bottom: 334px;
+    left: -14px;
+    max-width: 32.7%;
+    background-color: rgba(0, 212, 157, 0.75);
+    color: #ffffff;
+    margin: 15px;
 
 }
 
@@ -262,6 +265,11 @@ input[type="submit"]:hover {
 
 .account-grid h3 {
   color: #00d49d;
+}
+
+.account-grid div:nth-child(1){
+  padding-right: 100px;
+  border-right: 2px dashed #545454;
 }
 
 /*********************************FOOTER***************************************/
