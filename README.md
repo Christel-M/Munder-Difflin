@@ -20,5 +20,5 @@ Click [here](https://christel-m.github.io/Munder-Difflin/index.html) to see webs
 * CSS animated headline
 * JavaScript event call back for product information
 ![Product Page](https://github.com/Christel-M/Munder-Difflin/blob/master/images/DM-products.png)
-* JavaScript form alert box for contact us page
+* JavaScript alert box for contact us page
 ![Product Page](https://github.com/Christel-M/Munder-Difflin/blob/master/images/DM-feedbackresponse.png)
